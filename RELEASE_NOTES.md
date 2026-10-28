@@ -1,4 +1,4 @@
-# CarnEvil VR v0.1.0
+# CarnEvil VR v0.1.0 — Quest & PC VR
 
 First public release of CarnEvil VR for standalone Quest 3/3S and Windows OpenXR.
 
