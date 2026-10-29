@@ -5,7 +5,7 @@
 # CarnEvil VR
 ### Midway Arcade Light-Gun Horror · Standalone Meta Quest & PC VR
 
-[![Release v0.1.0](https://img.shields.io/badge/Release-v0.1.0_Experimental-b23449?style=for-the-badge)](https://github.com/vr4all-standalone/carnevil-vr/releases/latest)
+[![Release v0.1.2](https://img.shields.io/badge/Release-v0.1.2_Experimental-b23449?style=for-the-badge)](https://github.com/vr4all-standalone/carnevil-vr/releases/latest)
 [![Quest and PC VR](https://img.shields.io/badge/Headset-Quest_3_%2F_3S_%C2%B7_PC_VR_OpenXR-blue?style=for-the-badge)](#installation-meta-quest)
 [![Original arcade game required](https://img.shields.io/badge/Your_Game-carnevil_v1.0.3_%2B_CHD-orange?style=for-the-badge)](#your-game-files)
 
@@ -23,7 +23,7 @@
 
 **CarnEvil VR** brings Midway's arcade horror light-gun game to **Meta Quest 3 / 3S** and **Windows PC VR**. MAME 0.289 runs the original game; the OpenXR host rebuilds its characters and scenery in stereo, and your tracked controllers become the lightguns.
 
-This is the first experimental public release. The final build was tested and accepted on Quest 3S for scenery depth, smooth gameplay audio, laser alignment/occlusion, P2 joining, muzzle flash and smoke. Windows PCVR builds and automated OpenGL tests pass; PC headset profiles and every game route have not been exhaustively tested.
+The v0.1.2 update was tested and accepted on Quest 3S. It adds adjustable scene size and stereo depth, a HUD that scales with the scene, and corrected native impact alignment. Earlier accepted features include scenery depth, smooth gameplay audio, laser occlusion, P2 joining, muzzle flash and smoke. Windows PCVR builds and automated OpenGL tests pass; PC headset profiles and every game route have not been exhaustively tested.
 
 The [header artwork](readme-banner.md) uses the original Midway promotional art in the shared VR4ALL banner layout.
 
@@ -33,7 +33,9 @@ The [header artwork](readme-banner.md) uses the original Midway promotional art 
 - **Depth 3D backgrounds by default**, with Original available in the VR menu.
 - Solo hand switching and two-player play with reversible P1/P2 hand assignment.
 - Native shot-aligned lasers, recoil, muzzle flash, drifting smoke and adjustable haptics.
-- Arcade, Zapper and custom GLB gun options, gun angle/size and world-size controls.
+- **3D strength and Stereo separation**, both defaulting to **1.25×**.
+- Health and ammo HUD scale with 3D strength; native impact sparks follow the scene depth.
+- Arcade and Zapper gun options, gun angle/size and world-size controls.
 - Three reload modes, native Service controls and the shared VR4ALL startup/controller guide.
 
 ## Downloads
@@ -88,15 +90,17 @@ Settings, NVRAM and disk differences are kept in `userdata/`.
 | Grip, then stick up/down | World size |
 | Grip, then stick left/right | Gun size |
 
-Squeeze grip with the stick at rest first. Reload options are Button pump, Shoot off-screen and Point off-screen. The VR menu also provides **How to play**, gun/haptics options and **Open Service Menu**.
+Squeeze grip with the stick at rest first. Reload options are Button pump, Shoot off-screen and Point off-screen. The VR menu also provides **3D strength**, **Stereo separation**, **How to play**, gun/haptics options and **Open Service Menu**.
 
 In Service, use the stick to move, trigger/A/X to select and B/Y to go back. Right stick click toggles gun-test controls; in that mode triggers/pumps reach the native guns and A/X sends native Start. The VR menu's Service controls row offers the same toggle.
 
 ## Depth 3D and Known Limits
 
-**Menu → Background → Depth 3D** reconstructs scenery from the game's original depth data. **Original** remains available and your saved choice is respected. Flat or unusable depth falls back automatically.
+**Menu → Background → Depth 3D** reconstructs scenery from the game's original depth data. **Depth 3D is the default. Original** remains available and your saved choice is respected. Flat or unusable depth falls back automatically.
 
-The arcade camera only supplies visible scenery. Leaning may reveal gaps, with the original image behind them; this is not a complete 360° world. Wider view is unavailable. Boot and native diagnostics use a raster panel. The first release retains the tested APK's internal `0.1.0-dev` version label.
+**3D strength** ranges from 1–2× in 0.25 steps. **Stereo separation** offers 1, 1.25, 1.5, 2, 3, 4 and 5.25×. Both default to **1.25×**; existing valid saved choices are kept. Health and bullet counts scale with strength, while VR menus and tracked guns keep their physical size. Native hit effects now line up with the scene and laser. The Gun selector offers **Arcade / Zapper**; an old third choice safely falls back to Arcade.
+
+The arcade camera only supplies visible scenery. Leaning may reveal gaps, with the original image behind them; this is not a complete 360° world. Wider view is unavailable. Boot and native diagnostics use a raster panel. This release retains the physically tested APK's internal `0.1.2-dev` label (Android version code 3).
 
 ## Source and Credits
 

@@ -1,22 +1,25 @@
-# CarnEvil VR v0.1.0 — Quest & PC VR
+# CarnEvil VR v0.1.2 — Quest & PC VR
 
-First public release of CarnEvil VR for standalone Quest 3/3S and Windows OpenXR.
+A larger, adjustable VR view with corrected impact alignment. Tested and accepted on Quest 3S.
 
-- Stereo characters with tracked lightguns and Depth 3D scenery enabled by default.
-- Original background mode remains available.
-- Native shot-aligned lasers with solid gun occlusion, recoil, shaped muzzle flash, drifting smoke and adjustable haptics.
-- Solo hand switching, P1/P2 joining, reversible hand assignment, three reload modes and native Service controls.
-- Shared VR4ALL launch image and controller instructions.
-- Gameplay pacing/audio improvements and native per-pixel depth handling for moving floor edges.
+- **3D strength: 1.25× by default**, adjustable from 1–2× in 0.25 steps.
+- **Stereo separation: 1.25× by default**, with 1, 1.25, 1.5, 2, 3, 4 and 5.25× choices.
+- **Depth 3D backgrounds remain the default**, with Original available.
+- Health and bullet counts scale with 3D strength; the VR menu and tracked guns retain their physical size.
+- Native impact sparks now follow scene depth and line up with the laser. Sparks no longer interfere with later aiming rays.
+- Gun selection is **Arcade / Zapper**. A previous third-choice setting safely falls back to Arcade.
 
-The final build was accepted on Quest 3S for visuals/depth, audio, laser alignment/occlusion, P2 joining and flash/smoke. CTest 9/9, Python 32/32 and an independent source-build host check pass. Windows PCVR is built and tested automatically; all headset profiles and game routes are not fully tested.
+Existing valid settings and game saves are preserved. New defaults apply to fresh/missing settings; select 1.25× / 1.25× manually if you want to change an existing preference. Native game/audio/pacing libraries remain unchanged from the accepted build.
 
-## Install
+## Downloads
 
-Use `carnevil-vr-quest.apk` for Quest, or extract `carnevil-vr-pcvr.zip` for Windows. See the [project page](https://github.com/vr4all-standalone/carnevil-vr#readme) for game-file paths and controls. This APK is byte-identical to the accepted headset build and reports internal version `0.1.0-dev`.
+- `carnevil-vr-quest.apk` — standalone Meta Quest 3/3S.
+- `carnevil-vr-pcvr.zip` — Windows OpenXR portable build.
+- `carnevil-vr-source.zip` — complete matching source, pinned MAME Git bundle, exact SDL/OpenXR sources, build instructions and licenses.
+- `SHA256SUMS.txt` — checksums for all three downloads.
 
-**Bring your own CarnEvil v1.0.3 ROM and CHD. No game data or BIOS is bundled.**
+Install the APK over the existing app to retain data. Its internal version is `0.1.2-dev`, Android version code 3; these are the exact APK bytes tested in the headset. No ROM, CHD or other game data is included. Bring your own CarnEvil v1.0.3 files.
 
-`carnevil-vr-source.zip` is the complete matching buildable source, including the pinned MAME Git bundle and exact SDL/OpenXR dependency sources. Use that file rather than GitHub's automatic source archives for this project-page repository. `SHA256SUMS.txt` covers all three downloads.
+The source archive attached above contains the complete buildable mod. GitHub's automatic Source code archives contain the project page only.
 
-Scenery is reconstructed from the arcade camera's available depth; leaning can reveal gaps and wider view is unavailable. Boot/diagnostics remain on a raster panel.
+Quest 3S visuals, 1.25× / 1.25× view and impact/laser alignment were physically accepted. Windows builds and automated OpenGL tests pass; PCVR headset profiles and full routes remain untested. Depth scenery covers the original camera's visible surfaces, so leaning may expose gaps; wider scenery is unavailable.
