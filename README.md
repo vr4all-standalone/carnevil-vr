@@ -5,7 +5,7 @@
 # CarnEvil VR
 ### Midway Arcade Light-Gun Horror · Standalone Meta Quest & PC VR
 
-[![Release v0.1.3](https://img.shields.io/badge/Release-v0.1.3-brightgreen?style=for-the-badge)](https://github.com/vr4all-standalone/carnevil-vr/releases/latest)
+[![Release v0.1.4](https://img.shields.io/badge/Release-v0.1.4-brightgreen?style=for-the-badge)](https://github.com/vr4all-standalone/carnevil-vr/releases/latest)
 [![Quest and PC VR](https://img.shields.io/badge/Headset-Quest_3_%2F_3S_%C2%B7_PC_VR_OpenXR-blue?style=for-the-badge)](#installation-meta-quest)
 [![Original arcade game required](https://img.shields.io/badge/Your_Game-carnevil%20v1.0.3%20%2B%20CHD-orange?style=for-the-badge)](#your-game-files)
 
@@ -19,7 +19,7 @@
 
 ---
 
-## Update v0.1.3
+## Update v0.1.4
 
 - Shared wide VR4ALL setup panel, with validated automatic entry and manual Play.
 - Full player-colored Arcade body and grip, with original grey screws and lens details. P1 red / P2 blue follow player identity across hand swaps.
